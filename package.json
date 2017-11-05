@@ -1,0 +1,19 @@
+{
+  "name": "friendly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content.js",
+  "scripts": {
+    "start": "echo no way"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loktionov129/friendly.git"
+  },
+  "author": "loktionov129 <loktionov129@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loktionov129/friendly/issues"
+  },
+  "homepage": "https://github.com/loktionov129/friendly#readme"
+}
