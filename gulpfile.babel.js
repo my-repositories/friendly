@@ -1,8 +1,8 @@
 import del from 'del';
 import gulp from 'gulp';
 import size from 'gulp-size';
+import uglify from 'gulp-uglifyes';
 import babelify from 'babelify';
-import uglify from 'gulp-uglify';
 import buffer from 'vinyl-buffer';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
@@ -21,11 +21,11 @@ export { clean };
 
 export function js() {
   return browserify({entries: config.path.src, debug: false})
-    .transform('babelify', { presets: ['es2015'] })
+    .transform(babelify, { presets: ['es2015'] })
     .bundle()
     .pipe(source(config.path.content))
     .pipe(buffer())
-    .pipe(uglify())
+    .pipe(uglify({mangle: false, ecma: 6}))
     .pipe(size({ title: 'JS' }))
     .pipe(gulp.dest(config.path.build));
 }
