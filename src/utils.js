@@ -9,9 +9,13 @@ export function navigateToNextPage(links) {
 
   const nextPage = links.pop();
   window.sessionStorage.setItem(storageName, JSON.stringify(links));
-  window.setTimeout(() => window.location.href = nextPage, 100);
+  jump(nextPage);
 }
 
 export function getLinksFromStorage() {
   return JSON.parse(window.sessionStorage.getItem(storageName));
+}
+
+export function jump(url)  {
+  window.setTimeout(() => window.location.href = url, 100);
 }

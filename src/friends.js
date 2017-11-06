@@ -1,4 +1,3 @@
-export default function(document) {
+export default function() {
   console.warn('paginate && add friends');
-  console.warn(document);
 }

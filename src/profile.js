@@ -1,6 +1,11 @@
-export default function(document)  {
-  console.warn('go to friends list!');
-  console.warn(document);
+import { getLinksFromStorage, jump, navigateToNextPage } from './utils';
+
+export default function()  {
+  if (isPrivateProfile()) {
+    navigateToNextPage(getLinksFromStorage());
+  } else {
+    jump(window.location.href + '/friends');
+  }
 }
 
-// document.querySelectorAll('#profiles .section .no_content').length
+const isPrivateProfile = () => document.querySelectorAll('#profiles .section .no_content').length;

@@ -2,7 +2,6 @@
 import profile from './profile';
 import resumes from './resumes';
 
-const { document } = window;
 const bodyClassList = [...document.body.classList];
 const pages = [
   { className: 'friends_index_page', func: friends } ,
@@ -13,7 +12,7 @@ const pages = [
 if (window.location.origin === 'https://moikrug.ru') {
   for (let page of pages) {
     if (bodyClassList.indexOf(page.className) !== -1) {
-      page.func(document);
+      page.func();
       break;
     }
   }
