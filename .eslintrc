@@ -15,7 +15,8 @@
     "document": true,
     "module": true,
     "require": true,
-    "window": true
+    "window": true,
+    "JSON": true
   },
 
   "rules": {
@@ -47,7 +48,7 @@
     "no-confusing-arrow": 0,
     "no-console": 0,
     "no-use-before-define": 0,
-    "prefer-template": 2,
+    "prefer-template": 0,
     "require-yield": 0
   }
 }
