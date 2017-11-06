@@ -1,11 +1,6 @@
 import { navigateToNextPage } from './utils';
 
 export default function()  {
-  // allow our friendly transaction
-  if (!window.confirm('You are ready?')) {
-    return;
-  }
-
   // get all users
   let links = getUserLinks();
 

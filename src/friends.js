@@ -18,7 +18,7 @@ export default function() {
 
 const changePage = () => {
   const nextPage = document.querySelector('a.next_page');
-  if (nextPage.length) {
+  if (nextPage) {
     jump(nextPage.getAttribute('href'));
   } else {
     navigateToNextPage();
