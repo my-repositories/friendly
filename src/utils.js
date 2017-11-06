@@ -1,6 +1,10 @@
 const storageName = 'links';
 
 export function navigateToNextPage(links) {
+  if (!links) {
+    links = getLinksFromStorage();
+  }
+
   if (!links.length) {
     console.warn('Links array is empty!');
     window.alert('Links array is empty!');
@@ -13,7 +17,7 @@ export function navigateToNextPage(links) {
 }
 
 export function getLinksFromStorage() {
-  return JSON.parse(window.sessionStorage.getItem(storageName));
+  return JSON.parse(window.sessionStorage.getItem(storageName) || '[]');
 }
 
 export function jump(url)  {

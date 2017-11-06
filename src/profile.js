@@ -1,8 +1,8 @@
-import { getLinksFromStorage, jump, navigateToNextPage } from './utils';
+import { jump, navigateToNextPage } from './utils';
 
 export default function()  {
   if (isPrivateProfile()) {
-    navigateToNextPage(getLinksFromStorage());
+    navigateToNextPage();
   } else {
     jump(window.location.href + '/friends');
   }
